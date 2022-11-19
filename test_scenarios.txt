@@ -1,0 +1,64 @@
+Test Scenarios for EON Create Profile functionality:
+
+
+1. To verify that "Create Profile Button" is present after logging in.
+2. To verify that after the Create Profile button is clicked a new page "create-profile"  pops up.
+3. To verify that Create Profile page contains next elements:
+"Name" Label
+"Name" Input Field
+
+"Please select your age:" Label
+"Age range" Radio Button with a different age ranges (can be specified)
+
+"Please choose your avatar:" Label
+"Avatars" Radio button with different profile images (can be specified)
+
+"Create profile" Button
+
+4. To verify that the Name input field can accept alphabet
+5. To verify that the Name input field can accept special characters
+6. To verify that the Name input field can accept numbers
+7. To verify that the Name input field can accept empty space only
+8. To verify that the Name input field can have at least 1 character
+9. To verify that the Name input field have limitation to 32 characters
+10. To verify that entered random names in the input field can be deleted
+11. To verify that age range radio buttons are displayed
+12. To verify that only one radio button can be selected
+13. To verify once 18+ age range is clicked "Enter your birth year" input is displayed
+14. To verify that for each age range different avatar images are displayed
+15. To verify that after one "age range" radio button is selected, other can be selected again but previous will be unselected
+
+16. To verify that only one avatar image can be selected
+17. To verify that after one "avatar" image is selected, another can be selected again but the previous will be unselected.  
+
+18. To verify that Create Profile button can't create new Profile when:
+Only Name is entered, no other selections are made
+Only Age range is selected, no other entries and selections are made
+Only Age range is selected to 18+, but birth date is not entered
+Only Avatar image is selected, no other entries and selections are made
+
+19.To verify that proper notification pops up for each of partial selection from previous test cases (can be specified and merged inside previous test definition)
+
+20. To verify that a new profile is created when Name is entered, age range and avatar is selected, Create Profile button is clicked and it pops up a newly created profile.
+
+21. To verify that a new profile is created when Name is entered, age range is selected to 18+ and birth year can be entered in any age range, Create Profile button is clicked and a newly created profile. (BUG: year should be entered only if makes you older than 18+)
+
+21. To verify when Name is entered, age range and avatar is selected, Create Profile button is clicked it pops up newly created profile that have next elements that are previously selected:
+Large avatar background image
+Small avatar image
+Profile name
+Age range
+Profile description
+Delete Profile button
+Logout button
+
+22. Logout from account verify that is returned to login page
+23. Login into account and verify that recently created profiles are present (can be specified)
+24. Select any profile from the list and verify that the Profile window pops up with correctly entered elements.
+25. To verify that user with same name is not possible to create
+
+Test Scenarios for EON Delete Profile functionality:
+
+1. To check that Delete profile button is present, after we login and select any profile from list
+2. To check that Profile is deleted after we Select any profile from list and press delete button it returns us to choose-profile page and deleted profile is not on the list
+3 To check that after we delete profile, logout and login to account again, deleted profile is not present. 

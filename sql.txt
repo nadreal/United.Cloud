@@ -1,0 +1,15 @@
+/* 1. Izlistati sve Customer-e koji su kreirali nalog u poslednjih godinu dana, a imaju najmanje 3 kreirana
+profila.*/
+
+SELECT * FROM Customers c
+where c.Creation_date > DATEADD(Year,-1,GETDATE())
+and (SELECT count (customer_id) FROM Profile p where p.customer_id = c.customer_id) > 2
+
+
+/*2. Izlistati sve username-e I password-e za Customer-e koji imaju makar 2 profila sa istim Avatarom: */
+
+SELECT username, Password FROM customer c
+WHERE id  in(SELECT p.customer_id 
+FROM(SELECT  customer_id, avatar_id, COUNT(customer_id) as num_of_profiles
+FROM Profile GROUP BY customer_id, avatar_id
+HAVING COUNT(customer_id) >= 2) p);
